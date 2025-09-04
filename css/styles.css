@@ -4,8 +4,18 @@ body {
   background-color: #ffffff;
 }
 
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -16,7 +26,28 @@ button {
   cursor: pointer;
 }
 
+.container {
+  width: 1158px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
 /*-------HEADER-------*/
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-navigations {
+  display: flex;
+  align-items: center;
+}
 
 .header-logo {
   font-family: "Raleway", sans-serif;
@@ -26,10 +57,19 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 76px;
 }
 
 .header-logo-studio {
   color: #2e2f42;
+}
+
+.header-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-menu-link {
@@ -39,18 +79,31 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-contacts {
   font-style: normal;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-contacts-link {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-menu-link:hover,
@@ -64,6 +117,15 @@ button {
 
 .hero {
   background: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 929px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
 }
 
 .hero-title {
@@ -74,6 +136,8 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 496px;
+  margin: 0 auto 48px;
 }
 
 .hero-btn {
@@ -85,11 +149,35 @@ button {
   letter-spacing: 0.04em;
   color: #fff;
   background: #4d5ae5;
+  display: block;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.characteristic {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .characteristic-subtitle {
@@ -99,6 +187,12 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin: 0 auto;
+}
+
+.characteristic-list {
+  display: flex;
+  gap: 24px;
 }
 
 .characteristic-desc {
@@ -109,8 +203,14 @@ button {
   color: #434455;
 }
 
+.characteristic-item {
+  margin: 32px 16px;
+  width: ((100%-72)/4);
+}
+
 .team {
   background-color: #f4f4fd;
+  padding-bottom: 120px;
 }
 
 .team-title {
@@ -122,6 +222,9 @@ button {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin: 0 auto 72px;
+  padding-top: 120px;
+  padding-left: 72px;
 }
 
 .team-subtitle {
@@ -132,6 +235,13 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-item {
@@ -145,6 +255,11 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  margin-bottom: 32px;
+}
+
+.portfolio {
+  padding-bottom: 120px;
 }
 
 .portfolio-title {
@@ -156,6 +271,8 @@ button {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-top: 120px;
+  margin-bottom: 72px;
 }
 
 .portfolio-subtitle {
@@ -165,6 +282,17 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-bottom: 8px;
+  max-width: 232px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: calc((100%-4) / 6);
 }
 
 .portfolio-desc {
@@ -173,12 +301,15 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  margin-bottom: 32px;
 }
 
 /*-------FOOTER-------*/
 
 .footer {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -201,4 +332,5 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
 }
